@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="au.id.currie.tts"
+    version="0.0.1">
+
+    <name>TextToSpeech</name>
+    <description>Text To Speech Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>text,speech</keywords>
+
+    <js-module src="www/tts.js" name="TextToSpeech">
+        <clobbers target="window.texttospeech"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TextToSpeech">
+                <param name="android-package" value="au.id.currie.tts.TextToSpeechPlugin"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/au/id/currie/tts/TextToSpeechPlugin.java" target-dir="src/au/id/currie/tts" />
+    </platform>
+</plugin>

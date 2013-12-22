@@ -1,0 +1,12 @@
+{
+    "version": "0.0.1",
+    "name": "au.id.currie.tts",
+    "cordova_name": "Vibration",
+    "description": "Text To Speech Plugin",
+    "license": "Apache 2.0",
+    "keywords": [
+        "speak",
+        "text"
+    ],
+    "engines": []
+}
