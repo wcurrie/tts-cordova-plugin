@@ -24,4 +24,15 @@
 
         <source-file src="src/au/id/currie/tts/TextToSpeechPlugin.java" target-dir="src/au/id/currie/tts" />
     </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="TextToSpeech">
+                <param name="ios-package" value="TextToSpeech"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/TextToSpeech.h" />
+        <source-file src="src/ios/TextToSpeech.m" />
+        <framework src="AVFoundation.framework"/>
+    </platform>
 </plugin>
